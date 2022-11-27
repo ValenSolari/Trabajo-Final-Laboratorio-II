@@ -7,6 +7,8 @@
 #include <ctype.h>
 #include "Fixture.h"
 
+//funciones de Equipo y Grupos
+
 nodoEquipo* CrearNodoEquipo (Equipo dato)/**Creacion de una seleccion con 0 stacs**/
 {
     nodoEquipo* nuevo=(nodoEquipo*)malloc(sizeof(nodoEquipo));
@@ -155,7 +157,7 @@ void MostrarGrupos(Grupo FasedeGrupos[], int validos)
 
 
 
-
+///Funciones de Partidos y GrupoPartidos
 
 
 
@@ -425,7 +427,7 @@ void mostrarListaPartidos(nodoPartido* lista)
 
 
 
-
+///Funciones de Fases, cuartos, semis y final
 
 
 
@@ -436,7 +438,7 @@ void mostrarListaPartidos(nodoPartido* lista)
 Equipo* buscarPrimeroClasificadoEnLista(nodoGrupoEquipo* lista)
 {
     Equipo* primero=lista->equipo;/// equipo que se clasifica como 1ero del grupo/// equipo que se clasifica como 1ero del grupo
-    lista=lista->siguiente;/// se comprar· con el siguiente
+    lista=lista->siguiente;/// se comprar√° con el siguiente
 
     while(lista)
     {
@@ -570,7 +572,7 @@ PartidoFase crearPartidoFases(Equipo* equipo1,Equipo* equipo2,int id)
     datoPartido.equipo1=equipo1;
     datoPartido.equipo2=equipo2;
 
-    ///PequeÒa ayuda a argentina
+    ///Peque√±a ayuda a argentina
     if(strcmpi((*datoPartido.equipo1).nomEquipo,"Argentina")==0)
     {goles1=(rand()%5)+1;}
     else if(strcmpi((*datoPartido.equipo2).nomEquipo,"Argentina")==0)
